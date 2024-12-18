@@ -1,7 +1,10 @@
 const birthday_month = 3; // 0 is January
 const birthday_day = 12;
 
-const count = document.getElementById('countdown')
+const htmlDays = document.getElementById('days')
+const htmlHours = document.getElementById('hours')
+const htmlMinutes = document.getElementById('minutes')
+const htmlSeconds = document.getElementById('seconds')
 
 function addZero(time) {
     return time < 10 ? '0' + time : time;
@@ -33,5 +36,8 @@ function updateCountdown() {
 
     const days = nextBDay;
 
-    count.innerHTML = `${days} Days ${addZero(hours)}:${addZero(minutes)}:${addZero(seconds)}`
+    htmlDays.innerHTML = days
+    htmlHours.innerHTML = addZero(hours)
+    htmlMinutes.innerHTML = addZero(minutes)
+    htmlSeconds.innerHTML = addZero(seconds)
 }
