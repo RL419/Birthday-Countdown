@@ -1,17 +1,22 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    justify-content: center;
     background-image: linear-gradient(to bottom right, rgb(37, 2, 37), rgb(0, 0, 58));
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100% 100%;
+}
+
+.countdown {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
 }
 
 .number {
@@ -34,17 +39,33 @@ h1 {
     color: white;
     font-weight: 800;
     font-size: 4rem;
-    flex-wrap: wrap;
-    padding-top: 10%;
+    padding-bottom: 2rem;
 }
 
-.countdown {
+.container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    gap: 4rem;
 }
 
-.timerblock {
+.block {
     text-align: center;
+    min-width: 8rem;
+}
 
+.right, .left {
+    max-width: 30%;
+    max-height: 30%;
+    position: absolute;
+    bottom: 0;
+}
+
+.right {
+    right: 0;
+}
+
+.left {
+    left: 0;
 }
